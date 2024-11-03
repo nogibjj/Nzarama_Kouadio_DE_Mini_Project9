@@ -7,7 +7,6 @@ format:
 lint:
 	nbqa flake8 *.ipynb --max-line-length=800 --ignore=F821
 
-
 test:
 	pytest --nbval-lax *.ipynb
 

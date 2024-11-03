@@ -1,25 +1,38 @@
 
 # Data Engineering Project - Mini Project 9
 
-This project involves setting up a cloud-hosted Jupyter Notebook using Google Colab, performing data manipulation tasks on a sample dataset, and implementing a CI/CD pipeline to test and validate the notebook through GitHub Actions.
+[![CI Test Jupyter Notebook](https://github.com/nogibjj/Nzarama_Kouadio_DE_Mini_Project9/actions/workflows/notebook.yml/badge.svg)](https://github.com/nogibjj/Nzarama_Kouadio_DE_Mini_Project9/actions/workflows/notebook.yml)
 
 ### Project Overview
 This project demonstrates data engineering skills by leveraging Google Colab for data manipulation tasks and integrating a GitHub Actions CI/CD pipeline to automate testing. The notebook processes a dataset about the US demographic, performs various analyses, and ensures code quality through automated testing in the cloud.
 
-### Dataset Information
-- **Dataset Name**: ACS (American Community Survey) Data
-- **Description**: The dataset includes a sample of U.S. population data used to examine income distribution across different demographics.
-- **Source**: [ACS Data on GitHub](https://github.com/nickeubank/MIDS_Data/raw/refs/heads/master/US_AmericanCommunitySurvey/US_ACS_2017_10pct_sample.dta?download=)
+**Link to cloud-hosted notebook**: [Google Collab](https://colab.research.google.com/drive/1b4Mu7L5mAJBJ3lDNMZMwWt_xRKgr1zaj?usp=sharing)
 
-### Requirements
-To run the project locally, you need the following Python packages:
-- `pandas`
-- `numpy`
-- `pytest`
-- `nbval`
-- `black` (for code formatting)
+### Dataset and Data Manipulation
 
-These packages are listed in the `requirements.txt` file.
+**Dataset Overview**: I used the American Community Survey (ACS) dataset to analyze income distribution and demographic disparities in the U.S. This dataset includes various characteristics like income, age, employment status, and race, enabling us to explore income inequality across different groups.
+
+**Source**: [ACS Data on GitHub](https://github.com/nickeubank/MIDS_Data/raw/refs/heads/master/US_AmericanCommunitySurvey/US_ACS_2017_10pct_sample.dta?download=)
+
+**The main objectives were to**:
+
+- Calculate average income levels for various demographic groups.
+
+- Clean and prepare data by handling missing values.
+
+- Perform weighted calculations for accurate population estimates.
+
+- Identify income gaps between different racial and demographic groups.
+
+**Key Findings**:
+
+- Average Income Disparities: Significant income disparities were observed between racial groups, with White non-Hispanic individuals generally earning higher average incomes than Black individuals.
+
+- Income Distribution Analysis: The dataset revealed a skewed income distribution, with a small portion of the population earning extremely high incomes. By replacing placeholders with NaN, we ensured more accurate mean calculations, excluding unrealistic values.
+
+- Weighted Income Averages: Using survey weights provided a more representative income estimate, accounting for sampling differences. This approach highlighted the importance of weighting in understanding true population characteristics.
+
+- Wage Gap Analysis: The wage gap calculation showed that White non-Hispanic Americans earned approximately 52.5% more on average than Black Americans. This quantifies the income inequality within the dataset and provides a measurable view of demographic income disparities.
 
 ### Project Structure
 ```
@@ -45,32 +58,13 @@ These packages are listed in the `requirements.txt` file.
      pip install -r requirements.txt
      ```
 
-3. **Google Colab Setup**:
-   - Open [Google Colab](https://colab.research.google.com/).
-   - Upload the `Mini_Project_9.ipynb` notebook or access it directly from your GitHub repository by opening it from a GitHub link in Colab.
-
-### Running the Project
-1. **Data Manipulation Tasks**:
-   - Open the notebook in Google Colab.
-   - Follow the instructions in each cell to load the data, perform analysis, and observe the results.
-
-2. **Testing Locally (Optional)**:
-   - Run the tests on your notebook locally using the command:
-     ```bash
-     pytest --nbval Mini_Project_9.ipynb
-     ```
-
 ### CI/CD Pipeline
 The CI/CD pipeline is set up using GitHub Actions. It automates testing and ensures the notebook runs without errors whenever code is pushed to the repository.
 
-- **Workflow File**: `.github/workflows/notebook.yml`
-- **Pipeline Steps**:
   - **Install Packages**: Installs dependencies listed in `requirements.txt`.
   - **Format Code**: Checks code formatting with `black`.
-  - **Lint Code**: Checks code quality using `pylint`.
-  - **Run Tests**: Runs tests on the notebook using `pytest --nbval`.
+  - **Lint Code**: Checks code quality using `flake8`.
+  - **Run Tests**: Runs tests on the notebook using `pytest --nbval-lax`.
 
 The pipeline will automatically trigger on each push to the `main` branch, validating the notebook’s functionality.
 
-### Results
-The notebook outputs and analyses are stored within the notebook itself, providing insights into income distribution in the U.S. population sample. Additional test results from the CI/CD pipeline are available in the **Actions** tab on GitHub.
