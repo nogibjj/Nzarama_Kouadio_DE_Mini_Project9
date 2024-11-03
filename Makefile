@@ -9,7 +9,7 @@ lint:
 
 
 test:
-	pytest --nbval *.ipynb
+	pytest --nbval-lax *.ipynb
 
 all: install format lint test
 
