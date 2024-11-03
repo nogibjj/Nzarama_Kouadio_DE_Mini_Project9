@@ -26,13 +26,13 @@ This project demonstrates data engineering skills by leveraging Google Colab for
 
 **Key Findings**:
 
-- Average Income Disparities: Significant income disparities were observed between racial groups, with White non-Hispanic individuals generally earning higher average incomes than Black individuals.
+- **Average Income Disparities**: Significant income disparities were observed between racial groups, with White non-Hispanic individuals generally earning higher average incomes than Black individuals.
 
-- Income Distribution Analysis: The dataset revealed a skewed income distribution, with a small portion of the population earning extremely high incomes. By replacing placeholders with NaN, we ensured more accurate mean calculations, excluding unrealistic values.
+- **Income Distribution Analysis**: The dataset revealed a skewed income distribution, with a small portion of the population earning extremely high incomes. By replacing placeholders with NaN, we ensured more accurate mean calculations, excluding unrealistic values.
 
-- Weighted Income Averages: Using survey weights provided a more representative income estimate, accounting for sampling differences. This approach highlighted the importance of weighting in understanding true population characteristics.
+- **Weighted Income Averages**: Using survey weights provided a more representative income estimate, accounting for sampling differences. This approach highlighted the importance of weighting in understanding true population characteristics.
 
-- Wage Gap Analysis: The wage gap calculation showed that White non-Hispanic Americans earned approximately 52.5% more on average than Black Americans. This quantifies the income inequality within the dataset and provides a measurable view of demographic income disparities.
+- **Wage Gap Analysis**: The wage gap calculation showed that White non-Hispanic Americans earned approximately 52.5% more on average than Black Americans. This quantifies the income inequality within the dataset and provides a measurable view of demographic income disparities.
 
 ### Project Structure
 ```
