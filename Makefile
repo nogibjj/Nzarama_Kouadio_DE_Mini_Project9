@@ -1,14 +1,11 @@
-
 install:
-	pip install --upgrade -r requirements.txt && pip install -r requirements.txt
+    pip install -r requirements.txt
 
 format:
-	black *.py
+    black .
 
 lint:
-	pylint --disable=R,C --ignore-patterns=test_.*?py *.py
+    flake8 .
 
 test:
-	python -m pytest --cov=main test_main.py
-
-all: install format lint test
+    pytest --nbval *.ipynb
