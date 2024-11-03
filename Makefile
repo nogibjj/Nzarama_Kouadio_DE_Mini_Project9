@@ -2,12 +2,12 @@ install:
 	pip install --upgrade -r requirements.txt && pip install -r requirements.txt
 
 format:
-	black *.py
+	black *.ipynb
 
 lint:
-	pylint --disable=R,C --ignore-patterns=test_.*?py *.py
+	pylint --disable=R,C --ignore-patterns=test_.*?ipynb *.ipynb
 
 test:
-    pytest --nbval *.ipynb
+	pytest --nbval *.ipynb
 
 all: install format lint test
