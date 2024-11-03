@@ -53,10 +53,9 @@ This project demonstrates data engineering skills by leveraging Google Colab for
    ```
 
 2. **Install Dependencies**:
-   - Install the required packages:
-     ```bash
-     pip install -r requirements.txt
-     ```
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 ### CI/CD Pipeline
 The CI/CD pipeline is set up using GitHub Actions. It automates testing and ensures the notebook runs without errors whenever code is pushed to the repository.
