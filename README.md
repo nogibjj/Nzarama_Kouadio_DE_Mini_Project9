@@ -4,7 +4,7 @@
 This project involves setting up a cloud-hosted Jupyter Notebook using Google Colab, performing data manipulation tasks on a sample dataset, and implementing a CI/CD pipeline to test and validate the notebook through GitHub Actions.
 
 ### Project Overview
-This project demonstrates data engineering skills by leveraging Google Colab for data manipulation tasks and integrating a GitHub Actions CI/CD pipeline to automate testing. The notebook processes a dataset, performs various analyses, and ensures code quality through automated testing in the cloud.
+This project demonstrates data engineering skills by leveraging Google Colab for data manipulation tasks and integrating a GitHub Actions CI/CD pipeline to automate testing. The notebook processes a dataset about the US demographic, performs various analyses, and ensures code quality through automated testing in the cloud.
 
 ### Dataset Information
 - **Dataset Name**: ACS (American Community Survey) Data

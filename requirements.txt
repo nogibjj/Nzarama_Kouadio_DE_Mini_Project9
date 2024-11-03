@@ -6,5 +6,7 @@ numpy
 pytest
 nbval
 
-# Code formatting and linting
+# Code formatting and linting with nbqa
+nbqa
 black
+flake8
