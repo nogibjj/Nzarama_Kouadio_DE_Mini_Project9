@@ -36,12 +36,10 @@ These packages are listed in the `requirements.txt` file.
 ### Setup Instructions
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
-   cd your-repo-name
+   git clone https://github.com/nogibjj/Nzarama_Kouadio_DE_Mini_Project9.git
    ```
 
 2. **Install Dependencies**:
-   - Make sure you have Python installed.
    - Install the required packages:
      ```bash
      pip install -r requirements.txt
@@ -69,7 +67,7 @@ The CI/CD pipeline is set up using GitHub Actions. It automates testing and ensu
 - **Pipeline Steps**:
   - **Install Packages**: Installs dependencies listed in `requirements.txt`.
   - **Format Code**: Checks code formatting with `black`.
-  - **Lint Code**: Checks code quality using `flake8`.
+  - **Lint Code**: Checks code quality using `pylint`.
   - **Run Tests**: Runs tests on the notebook using `pytest --nbval`.
 
 The pipeline will automatically trigger on each push to the `main` branch, validating the notebook’s functionality.
